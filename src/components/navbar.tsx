@@ -8,10 +8,10 @@ export default function Navbar() {
           width={60}
           height={60}
           src="/prithviraj_chauhan.webp"
-          alt="Prithviraj Chauhan"
+          alt="Prithviraj Chauhan III"
         />
         <div className=" text-2xl font-extrabold leading-tight tracking-wide text-white">
-          <div>Prithvi Raj Chauhan</div>
+          <div>Prithvi Raj Chauhan III</div>
         </div>
       </div>
     );
