@@ -2,6 +2,7 @@ import Image from "next/image";
 import Titles from "@/components/titles";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Chat } from "@/components/Chat";
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
       <Navbar />
       <main className=" w-full h-full grid grid-cols-2 divide-x">
         <div className=" sticky top-0 flex justify-center items-center h-screen overflow-auto bg-black text-white">
+          <div className=" w-[95%] z-40 absolute bottom-0">
+            <Chat />
+          </div>
           <Image
             className=" object-cover"
             src="/background-new.png"

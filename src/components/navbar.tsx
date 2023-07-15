@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
     return (
-      <div className="fixed z-10 top-5 left-5 flex items-center space-x-4">
+      <div className="fixed z-50 top-5 left-5 flex items-center space-x-4">
         <Image
           className="rounded-full"
           width={60}
