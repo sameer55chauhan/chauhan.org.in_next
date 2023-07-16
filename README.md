@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Chauhan.org.in](https://chauhan.org.in)
+
+## Description ️️️📚
+🌟 Welcome to the Prithvi Raj Chauhan website! Here, you can discover the captivating life of the legendary figure through insightful blogs 📚, delve into his extraordinary biography "Rasoo" 📖, and even interact with Prithviraj himself using the ChatGPT integration 💬. Immerse yourself in his history, achievements, and enjoy an engaging experience on our user-friendly platform. ✨
+
+## Features 🔥
+1. Integration with ChatGPT for interactive communication with Prithvi Raj Chauhan 💬
+2. All the ebooks of volumes Prithvi Raj Rasoo 📙
+3. Mobile Friendly first 📱
+
+## Planned Features 🚀
+1. Simple blogs using Firebase 📑
+2. Dark Mode ️🖤
+3. Internationalisation: multiple languages ️️
+
+## Samples 👀
+![image](https://github.com/sameer55chauhan/chauhan.org.in_next/assets/48860013/2ffc4ae7-8468-4c2b-abc5-b6b89b63f2a4)
+
+## Stack Used:
+ - NextJs
+ - Typescript
+ - Firebase
+ - ChatGPT APIs
+ - Vercel and it's Edge functions
 
 ## Getting Started
 
-First, run the development server:
+After cloning, run the development server:
 
 ```bash
+npm install --force
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
