@@ -5,7 +5,7 @@ export default function Title({ title, description, image, pdf }: {[key: string]
   return (
     <Link href={`/book/${pdf}`}>
       <div className="my-3 lg:my-5 lg:h-48 flex flex-col items-center bg-white border border-gray-200 rounded-xl lg:rounded-2xl lg:flex-row lg:max-w-xl hover:bg-gray-100">
-        <div className="w-full h-full bg-gradient-to-r from-[#f12711] to-[#f5af19] rounded-t-xl lg:rounded-t-none lg:rounded-l-2xl">
+        <div className="w-full h-full bg-gradient-to-r from-[#f12711] to-[#f5af19] rounded-t-xl lg:rounded-tr-none lg:rounded-l-2xl">
           <div className="relative h-60 lg:h-full w-full rounded-t-xl lg:rounded-t-none lg:rounded-l-2xl  bg-white/50">
             <Image
               src={image}
