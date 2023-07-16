@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
@@ -34,7 +34,7 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
       }}
       placeholder="Type to start conversation..."
     />
-    <Button
+    {/* <Button
       type="submit"
       className="ml-3 px-5 flex-none text-transparent bg-gradient-to-r from-[#f12711] to-[#f5af19]"
       onClick={() => {
@@ -43,7 +43,19 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
       }}
     >
       Say
-    </Button>
+    </Button> */}
+    <button
+      type="submit"
+      onClick={() => {
+        sendMessage(input);
+        setInput("");
+      }}
+      className="ml-3 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#f12711] to-[#f5af19] group-hover:from-[#f12711] group-hover:to-[#f5af19] hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+    >
+      <span className=" relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+        Say
+      </span>
+    </button>
   </div>
 );
 

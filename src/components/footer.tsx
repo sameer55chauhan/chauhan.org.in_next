@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+        <div className="lg:flex lg:justify-between">
+          <div className="mb-6 lg:mb-0">
             <a href="https://flowbite.com/" className="flex items-center">
               <Image
                 src={"/mine.png"}
@@ -21,7 +21,7 @@ export default function Footer() {
                 height={32}
                 className="mr-3"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center text-xl lg:text-2xl font-semibold dark:text-white">
                 Project by Sameer Chauhan
               </span>
             </a>
