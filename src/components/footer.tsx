@@ -21,13 +21,13 @@ export default function Footer() {
                 height={32}
                 className="mr-3"
               />
-              <span className="self-center text-xl lg:text-2xl font-semibold dark:text-white">
+              <span className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
                 Project by Sameer Chauhan
               </span>
             </a>
           </div>
           <div>
-            <h2 className="flex flex-row mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="flex flex-row mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-slate-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"

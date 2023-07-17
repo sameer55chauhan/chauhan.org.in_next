@@ -6,7 +6,7 @@ import "@phuocng/react-pdf-viewer/cjs/react-pdf-viewer.css";
 
 export default function PdfWorker({ pdf }: { pdf: string}) {
     return (
-      <div className="h-[750px] w-[650px] lg:w-full overflow-auto">
+      <div className="h-[750px] w-[650px] lg:w-full overflow-auto dark:brightness-90">
         {/* @ts-ignore */}
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.4.456/build/pdf.worker.min.js">
           <div className="">

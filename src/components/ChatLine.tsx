@@ -55,15 +55,15 @@ export function ChatLine({ role = "assistant", content }: ChatGPTMessage) {
       }
     >
       <BalancerWrapper>
-        <div className="float-right bg-opacity-50 bg-gray-800 mb-3 rounded-lg px-3 py-3 shadow-lg ring-1 ring-zinc-100">
+        <div className="float-right bg-opacity-50 bg-gray-800 mb-3 rounded-lg px-3 py-3 shadow-lg ring-1 ring-zinc-100 dark:ring-slate-400">
           <div className="flex space-x-3">
             <div className="flex-1 gap-4">
-              <p className="font-large text-xxl text-white">
+              <p className="font-large text-xxl text-slate-50 dark:text-slate-200">
                 <a href="#" className="hover:underline">
                   {role == "assistant" ? "Prithvi:" : "You:"}
                 </a>
               </p>
-              <p className="lg:font-semibold">{formatteMessage}</p>
+              <p className="lg:font-semibold dark:lg:font-thin text-slate-50 dark:text-slate-300">{formatteMessage}</p>
             </div>
           </div>
         </div>

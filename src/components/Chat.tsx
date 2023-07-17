@@ -21,7 +21,7 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
       type="text"
       aria-label="chat input"
       required
-      className="min-w-0 text-black flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm"
+      className="min-w-0 text-black dark:text-slate-200 flex-auto appearance-none rounded-md border border-zinc-900/10 dark:border-slate-400 bg-slate-100 dark:bg-gray-800 px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 dark:shadow-slate-300/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm"
       value={input}
       onKeyDown={(e) => {
         if (e.key === "Enter") {
@@ -34,25 +34,15 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
       }}
       placeholder="Type to start conversation..."
     />
-    {/* <Button
-      type="submit"
-      className="ml-3 px-5 flex-none text-transparent bg-gradient-to-r from-[#f12711] to-[#f5af19]"
-      onClick={() => {
-        sendMessage(input);
-        setInput("");
-      }}
-    >
-      Say
-    </Button> */}
     <button
       type="submit"
       onClick={() => {
         sendMessage(input);
         setInput("");
       }}
-      className="ml-3 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#f12711] to-[#f5af19] group-hover:from-[#f12711] group-hover:to-[#f5af19] hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+      className="ml-3 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400 group-hover:from-[#f12711] group-hover:to-[#f5af19] dark:group-hover:to-emerald-600 dark:group-hover:from-sky-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
     >
-      <span className=" relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      <span className="dark:text-slate-200 relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
         Say
       </span>
     </button>
