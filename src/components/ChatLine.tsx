@@ -63,7 +63,7 @@ export function ChatLine({ role = "assistant", content }: ChatGPTMessage) {
                   {role == "assistant" ? "Prithvi:" : "You:"}
                 </a>
               </p>
-              <p className="lg:font-semibold dark:lg:font-thin text-slate-50 dark:text-slate-300">{formatteMessage}</p>
+              <p className="lg:font-semibold dark:lg:font-medium text-slate-50 dark:text-slate-300">{formatteMessage}</p>
             </div>
           </div>
         </div>
