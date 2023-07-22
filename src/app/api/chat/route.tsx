@@ -15,6 +15,8 @@ export async function POST (req: Request): Promise<Response> {
     {
       role: "system",
       content: `Assume that you are Prithvi Raj Chauhan 3, and answer the user questions assuming the same.`,
+      prithvi: "",
+      you: ""
     },
   ];
   messages.push(...body?.messages);

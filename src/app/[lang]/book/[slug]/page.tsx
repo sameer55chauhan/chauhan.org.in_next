@@ -1,8 +1,8 @@
-import { staticData } from "@/utils/staticData";
+import json from "@/../dictionaries/en.json";
 import PdfWorker from "@/components/pdfWorker";
 
 export async function generateStaticParams() {
-  return staticData.map((title) => ({
+  return json.titles.map((title) => ({
     slug: title.pdf,
   }));
 }

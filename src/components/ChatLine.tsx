@@ -9,16 +9,18 @@ type ChatGPTAgent = "user" | "system" | "assistant";
 export interface ChatGPTMessage {
   role: ChatGPTAgent;
   content: string;
+  prithvi: string;
+  you: string;
 }
 
 // loading placeholder animation for the chat line
-export const LoadingChatLine = () => (
+export const LoadingChatLine = ({ typingMsg}: { typingMsg: string }) => (
   <div className="flex min-w-full animate-pulse px-4 py-5 sm:px-6">
     <div className="flex flex-grow space-x-3">
       <div className="min-w-0 flex-1">
         <p className="font-large text-xxl text-gray-900">
           <a href="#" className="hover:underline">
-            Prithvi is Typing ...
+            { typingMsg }
           </a>
         </p>
         <div className="space-y-4 pt-4">
@@ -42,7 +44,7 @@ const convertNewLines = (text: string) =>
     </span>
   ));
 
-export function ChatLine({ role = "assistant", content }: ChatGPTMessage) {
+export function ChatLine({ role = "assistant", content, prithvi, you }: ChatGPTMessage) {
   if (!content) {
     return null;
   }
@@ -60,7 +62,7 @@ export function ChatLine({ role = "assistant", content }: ChatGPTMessage) {
             <div className="flex-1 gap-4">
               <p className="font-large text-xxl text-slate-50 dark:text-slate-200">
                 <a href="#" className="hover:underline">
-                  {role == "assistant" ? "Prithvi:" : "You:"}
+                  {role == "assistant" ? prithvi : you}
                 </a>
               </p>
               <p className="lg:font-semibold dark:lg:font-medium text-slate-50 dark:text-slate-300">{formatteMessage}</p>
