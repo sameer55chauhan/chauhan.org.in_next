@@ -19,6 +19,7 @@ export default function Home() {
               src="/background-new.png"
               alt="Prithviraj Chauhan Background"
               fill
+              priority
             />
           </div>
           <div className="flex flex-col justify-center items-center absolute bottom-0 w-full">
