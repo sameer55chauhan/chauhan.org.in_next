@@ -1,6 +1,6 @@
 import Title from "./title";
-import { Locale } from "../../i18n-config";
-import { getDictionary } from "../../get-dictionary";
+import { Locale } from "../i18n-config";
+import { getDictionary } from "../get-dictionary";
 
 export default async function Titles({ lang }: { lang: Locale}) {
   const dictionary = await getDictionary(lang);

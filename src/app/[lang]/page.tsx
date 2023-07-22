@@ -4,8 +4,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Chat } from "@/components/Chat";
 import ThemeButton from "@/components/ThemeButton";
-import { Locale } from "../../../i18n-config";
-import { getDictionary } from "../../../get-dictionary";
+import { Locale } from "../../i18n-config";
+import { getDictionary } from "../../get-dictionary";
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dictionary = await getDictionary(lang);
