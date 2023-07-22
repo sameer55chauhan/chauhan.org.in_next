@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Balancer from "react-wrap-balancer";
 
 export default function Footer() {
   return (
@@ -21,9 +22,11 @@ export default function Footer() {
                 height={32}
                 className="mr-3"
               />
-              <span className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
-                Project by Sameer Chauhan
-              </span>
+              <Balancer>
+                <h2 className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
+                  Project by Sameer Chauhan
+                </h2>
+              </Balancer>
             </a>
           </div>
           <div>
