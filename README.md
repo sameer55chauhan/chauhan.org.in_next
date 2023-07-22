@@ -1,17 +1,17 @@
 # [Chauhan.org.in](https://chauhan.org.in)
 
 ## Description ️️️📚
-🌟 Welcome to the Prithvi Raj Chauhan website! Here, you can discover the captivating life of the legendary figure through insightful blogs 📚, delve into his extraordinary biography "Rasoo" 📖, and even interact with Prithviraj himself using the ChatGPT integration 💬. Immerse yourself in his history, and achievements, and enjoy an engaging experience on our user-friendly platform. ✨
+🌟 Welcome to the Prithvi Raj Chauhan website! Here, you can discover the captivating life of the legendary figure through insightful blogs 📚, delve into his extraordinary biography "Rasoo" 📖, and even interact with Prithviraj himself using the ChatGPT integration 💬. Immerse yourself in his history, achievements, and enjoy an engaging experience on our user-friendly platform. ✨
 
 ## Features 🔥
 1. Integration with ChatGPT for interactive communication with Prithvi Raj Chauhan 💬
 2. All the ebooks of volumes Prithvi Raj Rasoo 📙
 3. Mobile Friendly first 📱
 4. Dark Mode ️🖤
-5. Internationalisation: multiple languages ️️
 
 ## Planned Features 🚀
 1. Simple blogs using Firebase 📑
+2. Internationalisation: multiple languages ️️
 
 ## Samples 👀
 Light Mode:
