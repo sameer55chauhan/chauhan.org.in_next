@@ -8,10 +8,10 @@ const ThemeButton = () => {
 
   return (
     <button
-      onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
+      onClick={() => (currentTheme == "dark" ? setTheme("light") : setTheme("dark"))}
       className="z-[41] fixed right-2 lg:right-4 top-2 lg:top-4 border bg-white dark:bg-gray-800 hover:bg-gray-800 dark:hover:bg-white transition-all duration-100 text-gray-800 dark:text-white hover:text-white dark:hover:text-gray-800 px-2 py-2 text-2xl md:text-4xl rounded-lg"
     >
-      {theme == "dark" ? (
+      {currentTheme != "light" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1em"

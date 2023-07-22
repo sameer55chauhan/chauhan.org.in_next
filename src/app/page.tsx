@@ -19,6 +19,7 @@ export default function Home() {
               src="/background-new.png"
               alt="Prithviraj Chauhan Background"
               fill
+              priority
             />
           </div>
           <div className="flex flex-col justify-center items-center absolute bottom-0 w-full">
@@ -39,9 +40,9 @@ export default function Home() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
