@@ -1,4 +1,4 @@
-import json from "@/dictionaries/en.json";
+import json from "@/../dictionaries/en.json";
 import PdfWorker from "@/components/pdfWorker";
 
 export async function generateStaticParams() {

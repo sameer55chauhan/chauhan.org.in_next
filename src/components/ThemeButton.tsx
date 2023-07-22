@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useTheme } from "next-themes";
-import { Locale } from "../i18n-config";
+import { Locale } from "../../i18n-config";
 import { usePathname } from 'next/navigation'
 import Link from "next/link";
 
