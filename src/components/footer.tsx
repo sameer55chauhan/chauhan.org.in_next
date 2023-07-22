@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Footer({ data }: { data: any }) {
+export default function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -22,7 +22,7 @@ export default function Footer({ data }: { data: any }) {
                 className="mr-3"
               />
               <span className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
-                {data.heading}
+                Project by Sameer Chauhan
               </span>
             </a>
           </div>
@@ -37,7 +37,7 @@ export default function Footer({ data }: { data: any }) {
               >
                 <path d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z" />
               </svg>
-              {data.attributes}
+              Attributes
             </h2>
             <ul>
               <li>
@@ -52,7 +52,7 @@ export default function Footer({ data }: { data: any }) {
               </li>
               <li>
                 <span className="text-gray-500 dark:text-gray-400 font-medium">
-                  {data.bookcover}:{" "}
+                  Books Cover:{" "}
                   <a
                     href="https://archive.org/"
                     target="_blank"
@@ -64,7 +64,7 @@ export default function Footer({ data }: { data: any }) {
               </li>
               <li>
                 <span className="text-gray-500 dark:text-gray-400 font-medium">
-                  {data.bookpdf}:{" "}
+                  Books PDF:{" "}
                   <a
                     href="https://archive.org/"
                     target="_blank"

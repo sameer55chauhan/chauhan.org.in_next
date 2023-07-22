@@ -1,11 +1,8 @@
 import Title from "./title";
-import { Locale } from "../../i18n-config";
-import { getDictionary } from "../../get-dictionary";
+import { staticData } from "../utils/staticData";
 
-export default async function Titles({ lang }: { lang: Locale}) {
-  const dictionary = await getDictionary(lang);
-  
-  const allTitlesComponents = dictionary.titles.map((title) => (
+export default function Titles() {
+  const allTitlesComponents = staticData.map((title) => (
   <Title key={title.title} title={title.title} description={title.description} image={title.image} pdf={title.pdf} />
   ));
 

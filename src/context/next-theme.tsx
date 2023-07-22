@@ -1,6 +1,6 @@
 "use client";
 
-import "@/app/[lang]/globals.css";
+import "@/app/globals.css";
 import { ThemeProvider } from "next-themes";
 
 function NextThemeProvider({ children }: { children: React.ReactNode }) {

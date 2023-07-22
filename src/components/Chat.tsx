@@ -1,30 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-// import { Button } from "@/components/Button";
-import { ChatLine, LoadingChatLine } from "./ChatLine";
-// import { type } from "os";
+import { Button } from "@/components/Button";
+import { type ChatGPTMessage, ChatLine, LoadingChatLine } from "./ChatLine";
 // import { useCookies } from "react-cookie";
 
 // const COOKIE_NAME = "";
 
-type ChatGPTAgent = "user" | "system" | "assistant";
+// default first message to display in UI (not necessary to define the prompt)
+export const initialMessages: ChatGPTMessage[] = [
+  {
+    role: "assistant",
+    content: "Hi! I am Prithvi Raj Chauhan. Ask me anything!",
+  },
+];
 
-export interface ChatGPTMessage {
-  role: ChatGPTAgent;
-  content: string;
-}
-
-export type dictionary_type = { dictionary: {
-  placeholder: string,
-  submitText: string,
-  content: string,
-  typingMsg: string,
-  prithvi: string,
-  you: string,
-}}
-
-const InputMessage = ({ input, setInput, sendMessage, placeholder, submitText }: any) => (
+const InputMessage = ({ input, setInput, sendMessage }: any) => (
   <div className="mt-6 flex clear-both">
     <input
       type="text"
@@ -41,7 +32,7 @@ const InputMessage = ({ input, setInput, sendMessage, placeholder, submitText }:
       onChange={(e) => {
         setInput(e.target.value);
       }}
-      placeholder={placeholder}
+      placeholder="Type to start conversation..."
     />
     <button
       type="submit"
@@ -52,20 +43,13 @@ const InputMessage = ({ input, setInput, sendMessage, placeholder, submitText }:
       className="ml-3 relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400 group-hover:from-[#f12711] group-hover:to-[#f5af19] dark:group-hover:to-emerald-600 dark:group-hover:from-sky-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
     >
       <span className="dark:text-slate-200 relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-        {submitText}
+        Say
       </span>
     </button>
   </div>
 );
 
-export function Chat({ dictionary }: dictionary_type) {
-  const initialMessages: ChatGPTMessage[] = [
-    {
-      role: "assistant",
-      content: dictionary.content,
-    },
-  ];
-
+export function Chat() {
   const [messages, setMessages] = useState<ChatGPTMessage[]>(initialMessages);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -137,17 +121,15 @@ export function Chat({ dictionary }: dictionary_type) {
   return (
     <div className="rounded-2xl lg:p-3 mb-3">
       {messages.map(({ content, role }, index) => (
-        <ChatLine key={index} role={role} content={content} prithvi={dictionary.prithvi} you={dictionary.you} />
+        <ChatLine key={index} role={role} content={content} />
       ))}
 
-      {loading && <LoadingChatLine typingMsg={dictionary.typingMsg} />}
+      {loading && <LoadingChatLine />}
 
       <InputMessage
         input={input}
         setInput={setInput}
         sendMessage={sendMessage}
-        placeholder={dictionary.placeholder}
-        submitText={dictionary.submitText}
       />
     </div>
   );

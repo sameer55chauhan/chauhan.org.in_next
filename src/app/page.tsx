@@ -4,29 +4,25 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Chat } from "@/components/Chat";
 import ThemeButton from "@/components/ThemeButton";
-import { Locale } from "../../../i18n-config";
-import { getDictionary } from "../../../get-dictionary";
 
-export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(lang);
-  
+export default function Home() {
   return (
     <div>
-      <Navbar heading={dictionary.home.navbar} />
+      <Navbar />
       <main className=" w-full h-full flex flex-col lg:grid lg:grid-cols-2 lg:divide-x">
-        <ThemeButton lang={lang} />
+        <ThemeButton />
         <div className="flex justify-center items-center lg:sticky lg:top-0 h-screen w-full overflow-auto bg-black text-white">
           <div className="relative w-full h-screen">
             <Image
               className="w-full h-full relative object-cover dark:brightness-50"
               src="/background-new.png"
-              alt={dictionary["home"]["background-new-alt"]}
+              alt="Prithviraj Chauhan Background"
               fill
             />
           </div>
           <div className="flex flex-col justify-center items-center absolute bottom-0 w-full">
             <div className="w-[95%] z-40">
-            <Chat dictionary={dictionary.chat} />
+              <Chat />
             </div>
             <div className="lg:hidden">
               <a
@@ -42,15 +38,13 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
                 >
                   <path
                     stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
-                <span className="sr-only">
-                  {dictionary["home"]["scroll-down"]}
-                </span>
+                <span className="sr-only">Scroll Down</span>
               </a>
             </div>
           </div>
@@ -60,20 +54,20 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
           id="titles-div"
         >
           <h1 className="my-16 lg:my-32 text-center text-3xl lg:text-6xl font-extrabold leading-tight tracking-normal text-gray-900 dark:text-slate-300 p-8 ">
-            {dictionary.home.heading[0]}&nbsp;
+            Select any&nbsp;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400">
-              {dictionary.home.heading[1]}
+              Title
             </span>
-            &nbsp;{dictionary.home.heading[2]}&nbsp;
+            &nbsp;and start&nbsp;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400">
-              {dictionary.home.heading[3]}
+              Reading
             </span>
           </h1>
-          <Titles lang={lang} />
+          <Titles />
         </div>
       </main>
       <hr />
-      <Footer data={dictionary.footer} />
+      <Footer />
     </div>
   );
 }
