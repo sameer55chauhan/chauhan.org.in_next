@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Titles from "@/components/titles";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Chat } from "@/components/Chat";
 import ThemeButton from "@/components/ThemeButton";
-import { Balancer } from "react-wrap-balancer";
+import SideContent from "../components/SideContent";
 
 export default function Home() {
   return (
@@ -51,24 +50,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div
-          className="flex flex-col justify-evenly items-center overflow-auto p-3"
-          id="titles-div"
-        >
-          <Balancer>
-            <h1 className="my-16 lg:my-32 text-center text-3xl lg:text-6xl font-extrabold leading-tight tracking-normal text-gray-900 dark:text-slate-300 p-8 ">
-              Select any&nbsp;
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400">
-                Title
-              </span>
-              &nbsp;and start&nbsp;
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400">
-                Reading
-              </span>
-            </h1>
-          </Balancer>
-          <Titles />
-        </div>
+        <SideContent />
       </main>
       <hr />
       <Footer />

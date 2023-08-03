@@ -22,11 +22,9 @@ export default function Footer() {
                 height={32}
                 className="mr-3"
               />
-              <Balancer>
-                <h2 className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
-                  Project by Sameer Chauhan
-                </h2>
-              </Balancer>
+              <h2 className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
+                <Balancer>Project by Sameer Chauhan</Balancer>
+              </h2>
             </a>
           </div>
           <div>

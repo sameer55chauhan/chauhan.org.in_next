@@ -21,14 +21,14 @@ export default async function Layout({
   let current_book = staticData.find((title) => title.pdf === params.slug);
   return (
     <div className="text-center">
-      <Balancer>
-        <h1 className="text-lg lg:text-xl font-semibold lg:font-extrabold leading-none tracking-tight text-gray-900 dark:text-slate-200 p-2 lg:p-4">
+      <h1 className="text-lg lg:text-xl font-semibold lg:font-extrabold leading-none tracking-tight text-gray-900 dark:text-slate-200 p-2 lg:p-4">
+        <Balancer>
           You are reading{" "}
           <span className="underline underline-offset-3 decoration-4 decoration-blue-400 dark:decoration-blue-600">
             {current_book?.title}
           </span>
-        </h1>
-      </Balancer>
+        </Balancer>
+      </h1>
       <div>{children}</div>
     </div>
   );
