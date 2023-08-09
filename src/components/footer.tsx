@@ -75,6 +75,16 @@ export default function Footer() {
                   </a>
                 </span>
               </li>
+              <li>
+                <span className="text-gray-500 dark:text-gray-400 font-medium">
+                  Article content generated through ChatGPT
+                </span>
+              </li>
+              <li>
+                <span className="text-gray-500 dark:text-gray-400 font-medium">
+                  Article images taken from Wikipedia
+                </span>
+              </li>
             </ul>
           </div>
         </div>

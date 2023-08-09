@@ -5,6 +5,7 @@ const notion = new Client({
 })
 
 export const getNotionData = async (databaseId) => {
+    console.log(databaseId);
     const response = await notion.databases.query({
         database_id: databaseId,
         // Filter out posts not checked to publish.
