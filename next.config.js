@@ -9,7 +9,16 @@ const nextConfig = {
                 pathname: '/**',
             },
         ],
-    }
+    },
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/books',
+                permanent: true,
+            },
+        ]
+    },
 }
 
 module.exports = nextConfig

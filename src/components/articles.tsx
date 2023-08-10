@@ -32,7 +32,7 @@ export default async function Articles() {
         return (
           <Link
             key={post.id}
-            href={`/articles/${post.properties.Slug.rich_text[0].plain_text}`}
+            href={`/article/${post.properties.Slug.rich_text[0].plain_text}`}
           >
             <div className="my-3 lg:my-5 lg:h-60 flex flex-col items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-xl lg:rounded-2xl lg:flex-row lg:max-w-xl hover:bg-gray-100 dark:hover:bg-gray-700">
               {postImageUrl ? (

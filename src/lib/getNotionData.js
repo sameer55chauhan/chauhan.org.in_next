@@ -5,7 +5,6 @@ const notion = new Client({
 })
 
 export const getNotionData = async (databaseId) => {
-    console.log(databaseId);
     const response = await notion.databases.query({
         database_id: databaseId,
         // Filter out posts not checked to publish.
@@ -51,3 +50,37 @@ export const getBlocks = async (blockId) => {
     }
     return blocks
 }
+
+export const getData = async (slug) => {
+    const database = await getNotionData(process.env.NOTION_DATABASE_ID);
+    const filter = database.filter(
+        (blog) => blog.properties.Slug.rich_text[0].plain_text === slug
+    );
+    const page = await getPage(filter[0].id);
+    const blocks = await getBlocks(filter[0].id);
+
+    const childrenBlocks = await Promise.all(
+        blocks
+            .filter((block) => block.has_children)
+            .map(async (block) => {
+                return {
+                    id: block.id,
+                    children: await getBlocks(block.id),
+                };
+            })
+    );
+
+    const blocksWithChildren = blocks.map((block) => {
+        if (block.has_children) {
+            block[block.type].children = childrenBlocks.find(
+                (x) => x.id === block.id
+            ).children;
+        }
+        return block;
+    });
+
+    return {
+        page,
+        blocks: blocksWithChildren,
+    };
+};
