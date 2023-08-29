@@ -22,11 +22,9 @@ export default function Footer() {
                 height={32}
                 className="mr-3"
               />
-              <Balancer>
-                <h2 className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
-                  Project by Sameer Chauhan
-                </h2>
-              </Balancer>
+              <h2 className="self-center text-xl lg:text-2xl font-semibold dark:text-slate-200">
+                <Balancer>Project by Sameer Chauhan</Balancer>
+              </h2>
             </a>
           </div>
           <div>
@@ -75,6 +73,16 @@ export default function Footer() {
                   >
                     Internet Archive
                   </a>
+                </span>
+              </li>
+              <li>
+                <span className="text-gray-500 dark:text-gray-400 font-medium">
+                  Article content generated through ChatGPT
+                </span>
+              </li>
+              <li>
+                <span className="text-gray-500 dark:text-gray-400 font-medium">
+                  Article images taken from Wikipedia
                 </span>
               </li>
             </ul>

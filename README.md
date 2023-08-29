@@ -8,12 +8,18 @@
 2. All the ebooks of volumes Prithvi Raj Rasoo 📙
 3. Mobile Friendly first 📱
 4. Dark Mode ️🖤
+5. Simple blogs using Notion 📑
 
 ## Planned Features 🚀
-1. Simple blogs using Firebase 📑
-2. Internationalisation: multiple languages ️️
+1. Internationalisation: multiple languages ️️
 
 ## Samples 👀
+Video:
+
+
+https://github.com/sameer55chauhan/chauhan.org.in_next/assets/48860013/1108ce54-49cf-4fb1-af02-65cf369328c6
+
+
 Light Mode:
 ![image](https://github.com/sameer55chauhan/chauhan.org.in_next/assets/48860013/2ffc4ae7-8468-4c2b-abc5-b6b89b63f2a4)
 Dark Mode:
@@ -22,7 +28,7 @@ Dark Mode:
 ## Stack Used:
  - NextJs
  - Typescript
- - Firebase
+ - Notion js sdk
  - ChatGPT APIs
  - Vercel and it's Edge functions
 

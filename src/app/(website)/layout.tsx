@@ -1,12 +1,24 @@
+import { Metadata } from "next";
 import Image from "next/image";
-import Titles from "@/components/titles";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Chat } from "@/components/Chat";
 import ThemeButton from "@/components/ThemeButton";
-import { Balancer } from "react-wrap-balancer";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Prithvi Raj Chauhan III - Biography, AI bot, and articles",
+  description:
+    "Prithviraj Chauhan | TitlesExplore the life and achievements of Prithvi Raj Chauhan III, the legendary ruler. Read his detailed biography and engage in interactive conversations with the Prithvi Raj Chauhan AI Bot using ChatGPT integration. Discover a collection of informative articles about his reign and historical significance. Can read in multiple languages.",
+  keywords:
+    "prithvi raj chauhan ai bot, raso, raso hindi, raso english, biography prithviraj,  prithviraj raso, author prithviraj bhatt, is prithviraj chauhan real, about prithviraj raso,  samrat prithviraj, was blind vijay pratap singh, google scholar prithviraj raso written by prithviraj 3, information",
+  robots: "index, follow",
+};
+
+export default async function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div>
       <Navbar />
@@ -51,24 +63,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div
-          className="flex flex-col justify-evenly items-center overflow-auto p-3"
-          id="titles-div"
-        >
-          <Balancer>
-            <h1 className="my-16 lg:my-32 text-center text-3xl lg:text-6xl font-extrabold leading-tight tracking-normal text-gray-900 dark:text-slate-300 p-8 ">
-              Select any&nbsp;
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400">
-                Title
-              </span>
-              &nbsp;and start&nbsp;
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f12711] to-[#f5af19] dark:to-emerald-600 dark:from-sky-400">
-                Reading
-              </span>
-            </h1>
-          </Balancer>
-          <Titles />
-        </div>
+        {children}
       </main>
       <hr />
       <Footer />
