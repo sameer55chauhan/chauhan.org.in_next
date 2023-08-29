@@ -21,7 +21,6 @@ export default function Home() {
           Articles
         </Link>
       </div>
-      {/* @ts-expect-error Server Component */}
       <Articles />
     </div>
   );

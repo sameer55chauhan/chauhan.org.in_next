@@ -5,7 +5,7 @@ import Image from "next/image";
 
 
 export default async function Articles() {
-  const posts = await getNotionData(process.env.NOTION_DATABASE_ID);
+  const posts: any = await getNotionData();
 
   return (
     <div>
@@ -21,9 +21,11 @@ export default async function Articles() {
           </span>
         </Balancer>
       </h1>
-      {!posts.length && <p className="mb-4 text-gray-600">No Articles available.</p>}
+      {!posts.length && (
+        <p className="mb-4 text-gray-600">No Articles available.</p>
+      )}
 
-      {posts.map((post) => {
+      {posts.map((post: any) => {
         const postImage = post.properties["Cover Image"].files[0];
         const postImageUrl =
           postImage?.type === "file"
