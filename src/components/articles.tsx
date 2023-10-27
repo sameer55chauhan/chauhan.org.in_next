@@ -3,7 +3,6 @@ import { getNotionData } from "@/lib/getNotionData";
 import Link from "next/link";
 import Image from "next/image";
 
-
 export default async function Articles() {
   const posts: any = await getNotionData();
 
@@ -28,9 +27,10 @@ export default async function Articles() {
       {posts.map((post: any) => {
         const postImage = post.properties["Cover Image"].files[0];
         const postImageUrl =
-          postImage?.type === "file"
-            ? postImage.file.url
-            : postImage?.external.url;
+          postImage.type === "external"
+            ? postImage.external.url
+            : postImage.file.url;
+
         return (
           <Link
             key={post.id}
